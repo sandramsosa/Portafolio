@@ -1,0 +1,481 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --body-bg-color: rgb(248, 249, 250);
+  --h1-color: rgb(33, 37, 41);
+  --h2-color: rgb(52, 58, 64);
+  --box-shadow: 0.75rem 0.4375rem 0.4375rem rgb(222, 226, 230);
+  --cars-bg-color: rgb(233, 236, 239);
+  --button-bg-color: rgb(173, 181, 189);
+  --button-bg-color-hover: rgb(206, 212, 218);
+}
+body {
+  background-color: var(--body-bg-color);
+  font-family: "Montserrat", serif;
+}
+body {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* encabezado y menu */
+header{
+  margin-bottom: 10rem;
+  position: sticky; 
+  top: 0; 
+  z-index: 1000; 
+  background-color: var(--body-bg-color);
+}
+section {
+  scroll-margin-top: 8rem; 
+}
+.titulo{
+  color: var(--h1-color);
+  padding: 2rem 5rem;
+  font-size: 3rem;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+  font-weight: bold;
+}
+.navbar-toggler {
+  border: none; 
+}
+.nav-link {
+  text-decoration: none; 
+  color: var(--navbar-text-color); 
+}
+.nav-link:hover {
+  color: var(--navbar-hover-color); 
+}
+.nav-item{
+  font-size: 1.2rem;
+  padding-right: 1rem;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+}
+
+/* sobre mi */
+.sobre_mi{
+  display: flex;
+  margin: 2rem 5rem;
+  padding: 1rem;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+.imagen img{
+  width: 100%;
+  border-radius: 10%;
+  box-shadow: var(--box-shadow);
+}
+.parrafo {
+  flex: 1.10 1.10 auto;
+}
+.parrafo h2{
+  color: var(--h2-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+}
+.parrafo p{
+  font-family: "Montserrat", serif;
+  color: var(--h2-color);
+  text-align: center;
+  font-size: 1.10rem;
+  font-weight: 500;
+  padding: 2rem 10rem;
+}
+
+/* proyectos */
+.proyectos {
+  margin: 10rem 0;
+  padding: 10rem 0;
+}
+.proyectos h2 {
+  color: var(--h2-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding: 2rem 5rem;
+  gap: 3rem; 
+}
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5rem;
+}
+.flip-card {
+  width: 23rem; 
+  height: 30rem; 
+  perspective: 63rem; 
+  font-family: "Montserrat", serif;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  box-shadow: 0.75rem 0.4375rem 0.4375rem rgb(222, 226, 230); 
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem; 
+}
+.flip-card-front {
+  background: white;
+  color: rgb(33, 37, 41);
+  padding: 1rem;
+}
+.flip-card-back {
+  background: white;
+  color: rgb(33, 37, 41);
+  transform: rotateY(180deg);
+  padding: 1rem; 
+}
+
+/* Botones */
+.botones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem; 
+  padding: 1rem; 
+}
+button {
+  width: 6.25rem; 
+  height: 3.75rem; 
+  transition: all 0.3s;
+  cursor: pointer;
+  background: rgb(173, 181, 189);
+  font-size: 1.2em;
+  font-weight: 550;
+  border: none;
+  border-radius: 0.3125rem; 
+}
+button a {
+  text-decoration: none;
+  color: rgb(33, 37, 41);
+}
+button:hover {
+  background: rgb(206, 212, 218);
+  color: rgb(52, 58, 64);
+  font-size: 1.5em;
+}
+
+/* habilidades */
+.habilidades {
+  margin: 2rem 10rem;
+  padding: 10rem 0;
+}
+#habilidades h2{
+  color: var(--h2-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+}
+.tarjeta {
+  margin: 5rem auto;
+  padding: 5rem;
+  background-color: var(--cars-bg-color);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  max-width: 90%;
+}
+.front, .back {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.front img, .back img {
+  width: 10rem;
+  height: 8rem;
+}
+.tarjeta h3 {
+  text-align: center;
+  color: var(--h2-color);
+  margin: 0 0 1.5rem 0;
+}
+.lenguajes {
+  text-align: center;
+  font-weight: bold;
+  color: var(--h2-color);
+}
+
+/* contacto */
+#contacto h2 {
+  color: var(--h2-color);
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+}
+.botones_contacto{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 3rem;
+}
+.botones_contacto button{
+  width: 20rem;
+  height: 6rem;
+}
+.botones_contacto button a{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* footer */
+footer{
+  text-align: center;
+  margin: 1rem;
+  color: var(--h2-color);
+  text-align: center;
+  font-weight: bold;
+  font-family: "Montserrat", serif;
+  text-shadow: var(--box-shadow);
+}
+/* Responsive
+/* Pantallas grandes (PC y Notebook) */
+@media (min-width: 1024px) {
+.titulo {
+    font-size: 3rem; 
+    padding: 1.5rem 0 0 3rem; 
+  }
+  .nav-item{
+    font-size: 1.10rem;
+    padding-right: 1rem;
+  }
+  .imagen img {
+    width: 100%;
+  }
+
+}  
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+  .titulo {
+    font-size: 2rem; 
+    padding: 1.5rem 0 0 3rem; 
+  }
+  .sobre_mi {
+    flex-direction: column; 
+    margin: 2rem 3rem;
+    gap: 3rem;
+  }
+  .imagen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  .imagen img {
+    width: 60%; 
+  }
+
+  .parrafo h2 {
+    font-size: 2rem; 
+  }
+
+  .parrafo p {
+    font-size: 1.1rem; 
+  }
+  .habilidades {
+    margin: 2rem 5rem;
+    padding: 2.5rem;
+  }
+
+  .tarjeta {
+    margin: 3rem auto;
+    padding: 3rem;
+    max-width: 85%;
+  }
+
+  .front, .back {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .front img, .back img {
+    width: 9rem; 
+    height: 7rem;
+  }
+  .botones_contacto {
+    flex-direction: column; 
+    gap: 1.5rem;
+    padding: 2rem 4rem;
+  }
+
+  .botones_contacto button {
+    width: 16rem; 
+  }
+}
+
+/* Móviles grandes */
+@media (min-width: 480px) and (max-width: 767px) {
+  .titulo {
+    font-size: 2.5rem; 
+    padding: 1rem 0 0 2rem; 
+  }
+  .sobre_mi {
+    flex-direction: column;
+    margin: 1.5rem 2rem;
+    gap: 2rem;
+  }
+  .imagen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  .imagen img {
+    width: 80%; 
+  }
+
+  .parrafo h2 {
+    font-size: 1.8rem;
+  }
+
+  .parrafo p {
+    font-size: 1rem;
+  }
+  .habilidades {
+    margin: 1.5rem 2rem;
+    padding: 2rem;
+  }
+
+  .tarjeta {
+    margin: 2rem auto;
+    padding: 2.5rem;
+    max-width: 95%;
+  }
+
+  .front, .back {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .front img, .back img {
+    width: 8rem;
+    height: 6rem;
+  }
+
+  #habilidades {
+    font-size: 2rem;
+  }
+  .botones_contacto {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .botones_contacto button {
+    width: 14rem;
+  }
+
+  #contacto {
+    font-size: 2rem; 
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 479px) {
+  .titulo {
+    font-size: 2rem; 
+    padding: 0.5rem 0 0 1rem; 
+  }
+  .sobre_mi {
+    flex-direction: column; 
+    margin: 1rem 1.5rem;
+    gap: 1.5rem;
+  }
+  .imagen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  .imagen img {
+    width: 90%; 
+  }
+
+  .parrafo h2 {
+    font-size: 1.6rem; 
+  }
+
+  .parrafo p {
+    font-size: 0.9rem; 
+  }
+  .habilidades {
+    margin: 1rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .tarjeta {
+    margin: 1.5rem auto;
+    padding: 2rem;
+    max-width: 100%; 
+  }
+
+  .front, .back {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .front img, .back img {
+    width: 7rem;
+    height: 5rem; 
+  }
+
+  #habilidades {
+    font-size: 1.8rem; 
+  }
+  .botones_contacto {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .botones_contacto button {
+    width: 12rem;
+  }
+
+  #contacto {
+    font-size: 1.8rem; 
+  }
+  
+}

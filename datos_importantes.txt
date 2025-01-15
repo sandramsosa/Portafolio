@@ -1,0 +1,9 @@
+repoditorio:
+https://github.com/sandramsosa/Poquedex
+demo:
+https://sandramsosa.github.io/Poquedex/
+demo:
+https://sandramsosa.github.io/Trabajo_final_CaC/
+repositorio: https://github.com/sandramsosa/Trabajo_final_CaC
+repositorio:
+https://github.com/sandramsosa/Inventario_Python
